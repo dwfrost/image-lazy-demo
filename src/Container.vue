@@ -1,9 +1,9 @@
 <template>
-  <div class="Scroll-top-wrap">
-    <div v-for="(item, index) of imgs" :key="index" class="item">
-      <img :src="item" alt="" />
+    <div class="Scroll-top-wrap">
+        <div v-for="(item, index) of imgs" :key="index" class="item">
+            <img :src="item" alt="" />
+        </div>
     </div>
-  </div>
 </template>
 
 <script setup>
@@ -12,8 +12,14 @@ import { imgs } from './constant'
 
 <style lang="scss" scoped>
 .Scroll-top-wrap {
-  height: 600px;
-  border: 1px solid;
-  overflow: scroll;
+    height: 600px;
+    border: 1px solid;
+    overflow: scroll;
+    .item {
+        min-height: 200px;
+        img {
+            display: block;
+        }
+    }
 }
 </style>
